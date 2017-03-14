@@ -10,10 +10,13 @@ body
     margin-bottom : 0
     font-size: 1.2em
 
+
+
+
 header
     border-bottom: solid rgba(0,0,0,0.5) 2px
     border-top: solid rgba(0,0,0,0.5) 2px
-    height: 80%
+    height: 70%
     overflow-y: hidden
     position: relative
 
@@ -27,7 +30,10 @@ header
         animation-duration: 2s
         animation-timing-function: linear
         animation-fill-mode: forwards
-        filter: blur(2px) grayscale(50%)
+        filter: blur(5px) grayscale(20%)
+
+
+
 
 .content
     z-index: 10
@@ -48,6 +54,8 @@ header
         @media screen and (max-width: 768px)
             font-size: 4em
             margin-top: 80px
+        @media screen and (min-width: 1400px)
+            margin-top: 200px
 
     @keyframes header-h1-anim
         from
@@ -58,13 +66,13 @@ header
             opacity : 1
 
     h2
-        font-size: 4em
+        font-size: 3em
         animation-name: header-h2-anim
         animation-duration: 4s
         animation-fill-mode: forwards
         margin-bottom: 300px
         @media screen and (max-width: 768px)
-            font-size: 2em
+            font-size: 2.5em
 
     @keyframes header-h2-anim
         from
@@ -84,17 +92,21 @@ header
         transition: all 1s
         border-bottom: solid 2px rgba(0,0,0,0.5)
 
+
+
+
 section
     position: relative
-    color: black
+    color: rgba(0,0,0,0.7)
     z-index: 10
     width: 70%
-    background-color: rgba(0,0,0,0.05)
-    margin: 0 auto 50px auto
+    background-color: rgba(150,150,150,0.2)
+    margin: 0 auto 200px auto
     border-radius: 15px
     border : solid 2px rgba(0,0,0,0.3)
     padding: 10px
-
+    opacity: 0
+    overflow: hidden
 
 footer
     background-color: #eee
