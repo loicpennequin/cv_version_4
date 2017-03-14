@@ -1,0 +1,98 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden;
+  background-color: #eee; }
+
+#nav {
+  margin-bottom: 0;
+  font-size: 1.2em; }
+
+header {
+  border-bottom: solid rgba(0, 0, 0, 0.5) 2px;
+  border-top: solid rgba(0, 0, 0, 0.5) 2px;
+  height: 80%;
+  overflow-y: hidden;
+  position: relative;
+  text-align: center; }
+  header #headerbg {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    animation: headerbg-anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    filter: blur(2px) grayscale(50%); }
+
+.content {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+  .content h1 {
+    margin-top: 120px;
+    font-size: 6em;
+    margin-bottom: 20px;
+    animation-name: header-h1-anim;
+    animation-duration: 4s;
+    animation-fill-mode: forwards; }
+    @media screen and (max-width: 768px) {
+      .content h1 {
+        font-size: 4em;
+        margin-top: 80px; } }
+@keyframes header-h1-anim {
+  from {
+    transform: translate(-200%);
+    opacity: 0; }
+  to {
+    transform: translate(0);
+    opacity: 1; } }
+  .content h2 {
+    font-size: 4em;
+    animation-name: header-h2-anim;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    margin-bottom: 300px; }
+    @media screen and (max-width: 768px) {
+      .content h2 {
+        font-size: 2em; } }
+@keyframes header-h2-anim {
+  from {
+    transform: translate(200%);
+    opacity: 0; }
+  to {
+    transform: translate(0);
+    opacity: 1; } }
+  .content .header-text {
+    display: inline-block;
+    -webkit-text-stroke: 2px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Vesper Libre";
+    text-align: center;
+    position: relative;
+    transition: all 1s;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.5); }
+
+section {
+  position: relative;
+  color: black;
+  z-index: 10;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 0 auto 50px auto;
+  border-radius: 15px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  padding: 10px; }
+
+footer {
+  background-color: #eee;
+  position: relative;
+  z-index: 10; }
+
+/*# sourceMappingURL=main.css.map */
