@@ -1,36 +1,57 @@
+$white : rgba(255,255,255,0.75)
+
 html, body
     margin: 0
     padding: 0
 
 body
     overflow-x : hidden
-    background-color: #eee
+    background: linear-gradient(to right, #eee, #ccccee)
 
 #nav
     margin-bottom : 0
     font-size: 1.2em
+    font-family: 'Antic', sans-serif
+    background: linear-gradient(to right, #eee, #ccccee)
+    a
+        box-sizing: border-box
+        color: black
+        &:hover
+            color: #555
+
+
 
 
 
 
 header
-    border-bottom: solid rgba(0,0,0,0.5) 2px
-    border-top: solid rgba(0,0,0,0.5) 2px
+    // border-bottom: solid black 5px
+    // border-top: solid black 5px
     height: 70%
-    overflow-y: hidden
+    overflow: hidden
     position: relative
-
     text-align: center
-
+    background-color: black
+    //text-shadow: 0 -10px 2px black
     #headerbg
         overflow: hidden
         position: absolute
         top: 0
-        animation: headerbg-anim
-        animation-duration: 2s
-        animation-timing-function: linear
-        animation-fill-mode: forwards
-        filter: blur(5px) grayscale(20%)
+        transition: 0.5s
+        transform: scale(2.05,2) translateX(24%)
+
+        //filter: blur(10px) contrast(150%)
+        animation-name: headerbg-anim
+        animation-duration: 30s
+        animation-iteration-count: infinite
+        -webkit-animation-direction: alternate
+
+@keyframes headerbg-anim
+    from
+        filter: blur(10px) contrast(150%) hue-rotate(0DEG)
+    to
+        filter: blur(10px) contrast(150%) hue-rotate(30DEG)
+
 
 
 
@@ -48,9 +69,13 @@ header
         margin-top: 120px
         font-size: 6em
         margin-bottom: 20px
-        animation-name: header-h1-anim
-        animation-duration: 4s
-        animation-fill-mode: forwards
+        color: $white
+        // color: transparent
+        // background: linear-gradient($white, black)
+        // background-clip: text
+        // animation-name: header-h1-anim
+        // animation-duration: 4s
+        // animation-fill-mode: forwards
         @media screen and (max-width: 768px)
             font-size: 4em
             margin-top: 80px
@@ -60,55 +85,73 @@ header
     @keyframes header-h1-anim
         from
             transform: translate(-200%)
-            opacity: 0
+
         to
             transform: translate(0)
-            opacity : 1
+
 
     h2
         font-size: 3em
-        animation-name: header-h2-anim
-        animation-duration: 4s
-        animation-fill-mode: forwards
+        // color: transparent
+        // background: linear-gradient($white, black)
+        color: $white
+        background-clip: text
         margin-bottom: 300px
+        // animation-name: header-h2-anim
+        // animation-duration: 4s
+        // animation-fill-mode: forwards
         @media screen and (max-width: 768px)
             font-size: 2.5em
 
     @keyframes header-h2-anim
         from
             transform: translate(200%)
-            opacity: 0
+
         to
             transform: translate(0)
-            opacity : 1
 
-    .header-text
+
+
+    h1, h2, h3
         display: inline-block
-        -webkit-text-stroke: 2px
-        color: rgba(0,0,0,0.5)
-        font-family: 'Vesper Libre'
+        font-family: 'Antic', sans-serif
         text-align: center
         position: relative
         transition: all 1s
-        border-bottom: solid 2px rgba(0,0,0,0.5)
+        //border-bottom: solid 2px rgba(255,255,255,0.3)
+
+    h3
+        margin-bottom: 20px
+        color: $white
+
 
 
 
 
 section
     position: relative
-    color: rgba(0,0,0,0.7)
+    color: rgba(255,255,255,0.6)
     z-index: 10
     width: 70%
-    background-color: rgba(150,150,150,0.2)
     margin: 0 auto 200px auto
     border-radius: 15px
-    border : solid 2px rgba(0,0,0,0.3)
     padding: 10px
     opacity: 0
     overflow: hidden
+    transition: 0.5s
+    .section-content
+        background-color: rgba(0,0,0,0.5)
+        border : solid 1px rgba(255,255,255,0.3)
+        padding: 15px
+        color: $white
+        border-radius: 8px
+
 
 footer
-    background-color: #eee
+    background: linear-gradient(to right, #eee, #ccccee)
     position: relative
     z-index: 10
+    a
+        color: black
+        &:hover
+            color: #555
