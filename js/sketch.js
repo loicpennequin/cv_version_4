@@ -13,6 +13,7 @@ var particles = [];
 
 var flowfield;
 var b = 0;
+
 setInterval(function(){
     if (b == 0) {
         b = 255;

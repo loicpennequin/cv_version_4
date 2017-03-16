@@ -7,6 +7,9 @@ body {
   background-size: cover;
   overflow-x: hidden; }
 
+ul {
+  list-style: none; }
+
 #nav {
   background-color: transparent;
   border: none;
@@ -112,7 +115,8 @@ h3 {
   font-size: 2em;
   letter-spacing: 3px;
   margin-bottom: 0;
-  padding: 5px 10px 0 15px; }
+  padding: 5px 10px 0 15px;
+  font-weight: bold; }
 
 h1, h2, h3 {
   display: inline-block;
@@ -136,7 +140,10 @@ section {
     color: rgba(255, 255, 255, 0.85);
     font-family: "Vesper Libre";
     font-size: 1em;
-    padding: 15px; }
+    padding: 25px; }
+
+#section1 p {
+  font-weight: bold; }
 
 footer {
   font-family: "Mate SC";
