@@ -5,7 +5,7 @@ var offset2 = $("#section2").offset().top-150
 var offset3 = $("#section3").offset().top-150
 var offset4 = $("#section4").offset().top-150
 var offset5 = $("#section5").offset().top-150
-
+var offsetHome = $("h1").offset().top-150
     // Lazy load des sections
     $(".content").scroll(function(){
         for (var i = 1;  i <=5 ; i++) {
@@ -60,10 +60,10 @@ var offset5 = $("#section5").offset().top-150
      }, 800);
     });
 
-    // $(".content").mouseenter(function(){
-    //     $("#headerbg").css("filter", "blur(10px) contrast(150%)");
-    // });
-    // $(".content").mouseleave(function(){
-    //     $("#headerbg").css("filter", "blur(0px) contrast(150%)");
-    // });
+    $("#home-lien").click(function(){
+     $(".content").animate({
+         scrollTop: 0
+     }, 800);
+    });
+
 });

@@ -33,7 +33,7 @@ function Particle() {
 
   this.show = function() {
     stroke(150 , 100, 0, 25);
-    strokeWeight(10);
+    strokeWeight(window.innerWidth * 0.010);
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();
   }

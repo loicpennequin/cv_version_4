@@ -4,8 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Vesper+Libre" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Antic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mate+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+
 
 </head>
 
@@ -19,6 +20,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              <a class="navbar-brand" id="home-lien" href="#"><img src="home.svg"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -33,24 +35,51 @@
     </nav>
 
     <header id="header" >
-        <div id="headerbg"></div>
+        <div id="headerbg">
+
+        </div>
         <div class="content">
-            <h1 class='header-text'>Loïc Pennequin</h1><br>
-            <h2 class='header-text'>Développeur web front-end</h2>
+            <div class="title">
+                <h1 class='header-text'>Loïc Pennequin</h1><br>
+                <h2 class='header-text'>Développeur web front-end</h2><br>
+                <h5>lo.pennequin@gmail.fr | 06 42 01 59 90</h5>
+            </div>
 
             <section id="section1">
                 <h3>Compétences</h3>
                 <div class="section-content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-3">
-                                Languages
+                            <div class="col-md-4">
+                                <p>Languages</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>Ionic</li>
+                                    <li>PHP</li>
+                                    <li>MySQL</li>
+                                </ul>
                             </div>
-                            <div class="col-md-3">
-                                Librairies et Frameworks
+                            <div class="col-md-4">
+                                <p>Librairies et Frameworks</p>
+                                <ul>
+                                    <li>Bootstrap</li>
+                                    <li>jQuery</li>
+                                    <li>AngularJS</li>
+                                    <li>P5.js</li>
+                                    <li>Symfony</li>
+                                </ul>
                             </div>
-                            <div class="col-md-3">
-                                CMS
+                            <div class="col-md-4">
+                                <p>CMS logiciels et autres</p>
+                                <ul>
+                                    <li>WordPress</li>
+                                    <li>Drupal</li>
+                                    <li>Sass</li>
+                                    <li>Git</li>
+                                    <li>Bash</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -80,9 +109,33 @@
         </div>
     </header>
     <footer>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-xs-12 contact">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#">lien LinkedIn</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#">lien GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <form action="/action_page.php" id="usrform">
+                        Nom: <input type="text" name="usrname"> </br>
+                        Adresse email: <input type="text" name="usrmail">
+                        <input type="submit">
+                    </form>
+                    <br>
+                    <textarea rows="4" name="message" form="usrform">Votre message ici
+                    </textarea>
+                    <button type="button" name="button">Envoyer</button>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
 
     </div>
