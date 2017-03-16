@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Mate+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+  <title>Loïc PENNEQUIN - Front-end web developer</title>
 
 
 </head>
@@ -48,7 +49,7 @@
             <section id="section1">
                 <h3>Compétences</h3>
                 <div class="section-content">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-4">
                                 <p>Languages</p>
@@ -109,28 +110,40 @@
         </div>
     </header>
     <footer>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3 col-xs-12 contact">
                     <div class="row">
-                        <div class="col-md-6">
-                            <a href="#">lien LinkedIn</a>
+                        <div class="col-md-3">
+                            <a href="#"><img class"contact-image" width="40" src="email.svg" alt="Email"></a>
                         </div>
-                        <div class="col-md-6">
-                            <a href="#">lien GitHub</a>
+                        <div class="col-md-3">
+                            <a href="#"><img class"contact-image" width="40" src="linkedin.svg" alt="mon LinkedIn"></a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#"><img class"contact-image" width="40" src="github.svg" alt="mon Github"></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12">
-                    <form action="/action_page.php" id="usrform">
-                        Nom: <input type="text" name="usrname"> </br>
-                        Adresse email: <input type="text" name="usrmail">
-                        <input type="submit">
+
+                <div class="col-md-5 col-xs-12">
+
+                    <form class="form-inline" id="usrform">
+                        <fieldset>
+                        <legend> Me contacter</legend>
+                        <div class="form-group">
+                            <label for="usrname">Nom </label>
+                            <input type="text" id="usrname"> </br>
+                        </div>
+                        <div class="form-group">
+                            <label for="usrmail">Email </label>
+                            <input type="text" id="usrmail">
+                        </div>
+                        <textarea rows="4" name="message" form="usrform"></textarea>
+                        <input type="submit" value="Envoyer">
+                        </fieldset>
                     </form>
-                    <br>
-                    <textarea rows="4" name="message" form="usrform">Votre message ici
-                    </textarea>
-                    <button type="button" name="button">Envoyer</button>
+
                 </div>
 
             </div>

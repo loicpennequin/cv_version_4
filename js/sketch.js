@@ -12,6 +12,15 @@ var zoff = 0;
 var particles = [];
 
 var flowfield;
+var b = 0;
+setInterval(function(){
+    if (b == 0) {
+        b = 255;
+    } else {
+        b = 0
+    }
+    console.log(this.b);
+}, 20000)
 
 function setup() {
   var header = createCanvas(window.innerWidth/2, window.innerHeight * 0.4);

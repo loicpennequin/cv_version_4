@@ -6,6 +6,7 @@ var offset3 = $("#section3").offset().top-150
 var offset4 = $("#section4").offset().top-150
 var offset5 = $("#section5").offset().top-150
 var offsetHome = $("h1").offset().top-150
+
     // Lazy load des sections
     $(".content").scroll(function(){
         for (var i = 1;  i <=5 ; i++) {
@@ -28,42 +29,54 @@ var offsetHome = $("h1").offset().top-150
     });
 
     // Smooth scroll
+    var scroll = function(lien, cible){
+        $(lien).click(function(){
+            $(".content").animate({
+                scrollTop: cible
+            }, 800);
+        })
+    }
+    scroll("#section-1-lien", offset1);
+    scroll("#section-2-lien", offset2);
+    scroll("#section-3-lien", offset3);
+    scroll("#section-4-lien", offset4);
+    scroll("#section-5-lien", offset5);
+    scroll("#home-lien", 0);
 
-    $("#section-1-lien").click(function(){
-    console.log($("#section1").position().top);
-     $(".content").animate({
-         scrollTop: offset1
-     }, 800);
-     });
-
-    $("#section-2-lien").click(function(){
-     $(".content").animate({
-         scrollTop: offset2
-     }, 800);
-    });
-
-    $("#section-3-lien").click(function(){
-     $(".content").animate({
-         scrollTop: offset3
-     }, 800);
-    });
-
-    $("#section-4-lien").click(function(){
-     $(".content").animate({
-         scrollTop: offset4
-     }, 800);
-    });
-
-    $("#section-5-lien").click(function(){
-     $(".content").animate({
-         scrollTop: offset5
-     }, 800);
-    });
-
-    $("#home-lien").click(function(){
-     $(".content").animate({
-         scrollTop: 0
-     }, 800);
-    });
+    // $("#section-1-lien").click(function(){
+    //  $(".content").animate({
+    //      scrollTop: offset1
+    //  }, 800);
+    //  });
+    //
+    // $("#section-2-lien").click(function(){
+    //  $(".content").animate({
+    //      scrollTop: offset2
+    //  }, 800);
+    // });
+    //
+    // $("#section-3-lien").click(function(){
+    //  $(".content").animate({
+    //      scrollTop: offset3
+    //  }, 800);
+    // });
+    //
+    // $("#section-4-lien").click(function(){
+    //  $(".content").animate({
+    //      scrollTop: offset4
+    //  }, 800);
+    // });
+    //
+    // $("#section-5-lien").click(function(){
+    //  $(".content").animate({
+    //      scrollTop: offset5
+    //  }, 800);
+    // });
+    //
+    // $("#home-lien").click(function(){
+    //  $(".content").animate({
+    //      scrollTop: 0
+    //  }, 800);
+    // });
 
 });
