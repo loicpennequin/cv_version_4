@@ -32,11 +32,11 @@ header {
   animation-name: hack;
   animation-duration: 5s;
   animation-fill-mode: forwards;
+  border: solid black 3px;
   height: 70%;
   overflow: hidden;
   position: relative; }
   header #headerbg {
-    border: solid black 3px;
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
@@ -84,7 +84,7 @@ header {
 
 h1 {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 6.5em;
+  font-size: 8em;
   margin-bottom: 20px;
   margin-top: 120px; }
   @media screen and (max-width: 768px) {
@@ -97,7 +97,8 @@ h1 {
 
 h2 {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 3em; }
+  font-size: 4em;
+  font-weight: bold; }
   @media screen and (max-width: 768px) {
     h2 {
       font-size: 2.5em; } }
@@ -110,9 +111,9 @@ h5 {
 
 h3 {
   background-color: rgba(0, 0, 0, 0.5);
+  border-top-right-radius: 10px;
   color: rgba(255, 255, 255, 0.85);
   font-size: 2em;
-  letter-spacing: 3px;
   margin-bottom: 0;
   padding: 5px 10px 0 15px;
   font-weight: bold; }
@@ -120,8 +121,10 @@ h3 {
 h1, h2, h3 {
   display: inline-block;
   font-family: "Dorsa", sans-serif;
+  letter-spacing: 3px;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 0 0 2px black; }
 
 section {
   color: rgba(255, 255, 255, 0.6);
@@ -137,9 +140,13 @@ section {
   section .section-content {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 0.85);
-    font-family: "Vesper Libre";
-    font-size: 1em;
-    padding: 25px; }
+    font-family: "Mate SC";
+    font-size: 1.1em;
+    padding: 25px;
+    text-shadow: 0 0 2px black; }
+    @media screen and (max-width: 768px) {
+      section .section-content {
+        font-size: 0.9em; } }
 
 #section1 p {
   font-weight: bold; }
